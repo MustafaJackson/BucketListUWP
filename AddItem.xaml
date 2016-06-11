@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="BucketListUWP.AddItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BucketListUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="goalDescriptionTextBox.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="goalNameTextBox.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="641"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <StackPanel Padding="20">
+            <TextBox x:Name="goalDescriptionTextBox" Margin="10" Header="Goal Description" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="125" Width="300" />
+            <TextBox x:Name="goalNameTextBox" Margin="10" Header="Goal Name" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Width="300" />
+
+            <Button x:Name="addButton" Margin="10" Content="add" HorizontalAlignment="Left" VerticalAlignment="Top" Click="addButton_Click" />
+
+        </StackPanel>
+        <StackPanel x:Name="stackPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Visible">
+            <Button Click="AddItemButton_Click" Content="Add New" Margin="12" FontSize="29.333" />
+            <Button Click="AboutButton_Click" Content="About" Margin="12" FontSize="29.333" />
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="BucketListUWP.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BucketListUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="commandBar">
+            <AppBarButton Icon="Home" Label="Home" x:Name="HomeButton" Click="HomeButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="12">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock2.(TextBlock.FontSize)" Value="64"/>
+                        <Setter Target="textBlock2.(TextBlock.FontWeight)">
+                            <Setter.Value>
+                                <FontWeight>Bold</FontWeight>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBlock.(TextBlock.FontSize)" Value="48"/>
+                        <Setter Target="textBlock1.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="textBlock1.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                        <Setter Target="commandBar.(UIElement.Visibility)" Value="Collapsed"/>
+                        <Setter Target="textBlock1.(TextBlock.FontSize)" Value="24"/>
+                        <Setter Target="AboutHomeButton.(UIElement.Visibility)" Value="Visible"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="750"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="textBlock2" Text="About" TextAlignment="Center" Style="{ThemeResource HeaderTextBlockStyle}" />
+
+        <TextBlock x:Name="textBlock" Grid.Row="1" FontSize="25" Text="Bucket List is your friend who remembers what you want and fantasize about, tell him your dreams and he'll save it for you till you get them done." Style="{ThemeResource BodyTextBlockStyle}" Margin="20,50,20,20" TextWrapping="Wrap" />
+
+        <TextBlock x:Name="textBlock1" Grid.Row="1" FontSize="20" Text="for contact : Mustafa.Alaaelden@outlook.com" Style="{ThemeResource BaseTextBlockStyle}" Margin="20" VerticalAlignment="Bottom" />
+        <Button x:Name="AboutHomeButton" Grid.Row="2" Content="Home" Click="HomeButton_Click" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="29.333" />
+    </Grid>
+</Page>
