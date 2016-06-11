@@ -1,48 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
-
-  <Identity
-    Name="5ea1f0de-101e-4556-831e-014f5c190e8d"
-    Publisher="CN=kinan"
-    Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="5ea1f0de-101e-4556-831e-014f5c190e8d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="29388AlaaElden.BucketyListy" Publisher="CN=E58C6F8A-7EE6-4D09-A9B5-7CBEF6F1B640" Version="1.1.1.0" />
+  <mp:PhoneIdentity PhoneProductId="5ea1f0de-101e-4556-831e-014f5c190e8d" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>BucketListUWP</DisplayName>
-    <PublisherDisplayName>kinan</PublisherDisplayName>
+    <DisplayName>Buckety Listy</DisplayName>
+    <PublisherDisplayName>AlaaElden</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="BucketListUWP.App">
-      <uap:VisualElements
-        DisplayName="BucketListUWP"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="BucketListUWP"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="BucketListUWP.App">
+      <uap:VisualElements DisplayName="Buckety Listy" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Bucket Listy is your UWP friend who remembers what you want and fantasize about, tell him your dreams and he'll save it for you till you get them done." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="portraitFlipped" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>

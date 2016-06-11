@@ -11,11 +11,13 @@
     
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="VisualState">
+            <VisualStateGroup x:Name="addPageVisualStateGroup">
+                <VisualState x:Name="addPageVisualState">
                     <VisualState.Setters>
                         <Setter Target="goalDescriptionTextBox.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
                         <Setter Target="goalNameTextBox.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="addButton.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                        <Setter Target="addButton.(Control.FontSize)" Value="26.667"/>
                     </VisualState.Setters>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="641"/>
@@ -27,11 +29,11 @@
             <TextBox x:Name="goalDescriptionTextBox" Margin="10" Header="Goal Description" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Height="125" Width="300" />
             <TextBox x:Name="goalNameTextBox" Margin="10" Header="Goal Name" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Top" Width="300" />
 
-            <Button x:Name="addButton" Margin="10" Content="add" HorizontalAlignment="Left" VerticalAlignment="Top" Click="addButton_Click" />
+            <Button x:Name="addButton"  Margin="10" Content="add" HorizontalAlignment="Left" VerticalAlignment="Top" Click="addButton_Click" />
 
         </StackPanel>
         <StackPanel x:Name="stackPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Visibility="Visible">
-            <Button Click="AddItemButton_Click" Content="Add New" Margin="12" FontSize="29.333" />
+            <Button Click="Button_Click" Content="Back" Margin="12" FontSize="29.333" />
             <Button Click="AboutButton_Click" Content="About" Margin="12" FontSize="29.333" />
         </StackPanel>
     </Grid>

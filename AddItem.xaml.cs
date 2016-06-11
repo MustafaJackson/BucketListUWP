@@ -32,5 +32,15 @@ namespace BucketListUWP
             App.DataModel.addItem(goalNameTextBox.Text, goalDescriptionTextBox.Text);
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AboutPage));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }
